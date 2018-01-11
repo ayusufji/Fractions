@@ -32,5 +32,15 @@ public class Fraction
     {
 
         return new Fraction(num*f.num, denom*f.denom);
+
+    }
+
+    public Fraction inverse()
+    {
+        if ( num == 0)
+        {
+            return null;
+        }
+       return new Fraction( denom, num );
     }
 }

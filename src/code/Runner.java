@@ -8,7 +8,8 @@ public class Runner
         Fraction otherFraction = new Fraction (5);
         Fraction a = new Fraction(myFraction);
         Fraction multiplied = myFraction.multiply(otherFraction);
-        System.out.print(multiplied);
+        Fraction inv = myFraction.inverse();
+        System.out.print(inv);
 
     }
 
