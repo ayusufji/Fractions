@@ -61,22 +61,25 @@ public class Fraction
     {
         int gcf = 1;
 
+        int min = Math.min(a,b);
+        for (int i = min; i > 0 ; i--)
+        {
+            if (a%i == 0 && b%i == 0)
+            {
+                a /= i;
+                b /= i;
+                return i;
+            }
+        }
 
-        return gcf;
+        return 1;
     }
 
     private void simplifiy()
     {
-        int min = Math.min(num, denom);
-        for (int i = min; i > 0 ; i--)
-        {
-            if (num%i == 0 && denom%i == 0)
-            {
-                num /= i;
-                denom /= i;
-                return;
-            }
-        }
+        int factor = gcf(num, denom);
+        num /= factor;
+        denom /= factor;
     }
 
 }
